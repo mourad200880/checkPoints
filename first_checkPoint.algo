@@ -1,0 +1,42 @@
+//First Task
+ALGORITHM calcWordNum
+VAR
+    str: STRING[];
+    count, countVowel, i: NUMBER;
+BEGIN
+    Read(str);
+    count := 0;
+    countVowel:= 0;
+    FOR i FROM 1 TO str.length STEP +1 DO
+    IF (str[i] = " " || str[i] = "." ) THEN
+        count++;
+    ELSE_IF(str[i] = "a" || str[i] = "e" || str[i] = "i" || str[i] = "o" || str[i] = "u") THEN
+        countVowel++
+    END_IF
+    Write(count, countVowel);
+END
+
+//Second Task
+
+ALGORITHM findSum
+VAR
+    arr1 : ARRAY_OF INTEGER[n];
+    arr2 : ARRAY_OF INTEGER[m];
+    n, m, i, j: INTEGER;
+    sum : INTEGER := 0;
+BEGIN
+    Read(n, m);
+    Read(arr1[n], arr2[m]);
+    FOR i FROM 1 TO n STEP +1 DO
+        Read(arr1[i]);
+        FOR j FROM 1 TO m STEP +1 DO
+            Read(arr1[j])
+            IF(arr1[i] = arr2[j]) THEN
+            sum := sum + arr1[i];
+            END_IF
+        END
+    END
+    Write(sum)
+END
+
+
